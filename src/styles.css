@@ -1,21 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
-/* Global styles: apply to every component in the application. */
+:root {
+  --p-dark: #4a148c;
+  --p-main: #6a1b9a;
+  --p-accent: #8e24aa;
+  --p-bg: #f3e5f5;
+  --p-card: #ffffff;
+  --p-tint: #faf5ff;
+  --p-border: #e1bee7;
+  --p-text: #22132e;
+}
+
 body {
   margin: 0;
-  color: #252525;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.7;
+  background: var(--p-bg);
+  color: var(--p-text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.65;
+}
+
+.resume, main, section.card, .card {
+  background: var(--p-card);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(74, 20, 140, 0.08);
+}
+
+.resume {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 28px 32px;
 }
 
 section {
-  margin: 26px 0;
+  background: var(--p-tint);
+  border: 1px solid var(--p-border);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin: 20px 0;
 }
 
-/* Shared heading style, used by several components. */
 .section-title {
-  color: #9000b4;
-  border-bottom: 1px solid #aaaaaa;
+  color: var(--p-dark);
+  border-bottom: 1.5px solid var(--p-border);
   padding-bottom: 6px;
+  margin-top: 0;
   text-transform: uppercase;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
+}
+
+button, .btn {
+  font-family: inherit;
+  background: var(--p-main);
+  color: #ffffff;
+  border: 1px solid var(--p-main);
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+button:hover, .btn:hover {
+  background: var(--p-dark);
+  border-color: var(--p-dark);
+}
+
+button.active, .btn.active, [aria-current="page"] {
+  background: #ffffff;
+  color: var(--p-dark);
+  border-color: var(--p-dark);
+}
+
+@media (max-width: 600px) {
+  .resume {
+    margin: 14px;
+    padding: 18px;
+  }
 }
